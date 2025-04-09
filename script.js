@@ -200,11 +200,11 @@ import levels from "./levels.js"
 }
 
     document.addEventListener('mousedown', poiner_down)
-    document.addEventListener('touchdown', poiner_down)
+    document.addEventListener('touchstart', poiner_down)
     document.addEventListener('mousemove', pointer_move)
     document.addEventListener('touchmove', pointer_move)
     document.addEventListener('mouseup', pointer_up)
-    document.addEventListener('touchup', pointer_up)
+    document.addEventListener('touchend', pointer_up)
 
     load()
 })()
