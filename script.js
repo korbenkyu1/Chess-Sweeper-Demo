@@ -163,17 +163,17 @@ import levels from "./levels.js"
 
         if(y < rect.top)
         {
-            if(x < rect.left) flick.src = './assets/bishop.png'
-            else if(x < rect.right) flick.src = './assets/pawn.png'
-            else flick.src = './assets/knight.png'
+            if(x < rect.left) flick.src = './assets/Bishop.png'
+            else if(x < rect.right) flick.src = './assets/Pawn.png'
+            else flick.src = './assets/Knight.png'
         }
         else if(y < rect.bottom)
         {
-            if(x < rect.left) flick.src = './assets/queen.png'
+            if(x < rect.left) flick.src = './assets/Queen.png'
             else if(x < rect.right)  flick.src = './assets/flick.png'
-            else flick.src = './assets/rook.png'
+            else flick.src = './assets/Rook.png'
         }
-        else flick.src = './assets/empty.png'
+        else flick.src = './assets/Empty.png'
     }
     
     function pointer_up(e)
