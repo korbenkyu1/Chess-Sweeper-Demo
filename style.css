@@ -1,0 +1,138 @@
+body{
+    width: 100vw; height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F2F1F0;
+}
+
+.hidden{
+    display: none;
+}
+.top-left{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.top-right{
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+h1, h3{
+    margin-top: 10px;
+}
+
+a{
+    margin-top: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    text-align: right;
+    line-height: 30px;
+}
+
+.board{
+    margin: 0;
+    width: 80vmin;
+    height: 80vmin;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.light{ 
+    background-color: #A7D948;
+}
+.dark{ 
+    background-color: #8ECC39;
+}
+.light.attacked{ 
+    background-color: #E5C29F;
+}
+.dark.attacked{ 
+    background-color: #D7B899;
+}
+td{
+    width: 10vmin;
+    height: 10vmin;
+    padding: 0;
+    background-size: contain;
+}
+td[data-number="1"]{ background-image: url('./assets/1.png');}
+td[data-number="1"]{ background-image: url('./assets/1.png');}
+td[data-number="2"]{ background-image: url('./assets/2.png');}
+td[data-number="3"]{ background-image: url('./assets/3.png');}
+td[data-number="4"]{ background-image: url('./assets/4.png');}
+td[data-number="5"]{ background-image: url('./assets/5.png');}
+td[data-number="6"]{ background-image: url('./assets/6.png');}
+td[data-number="7"]{ background-image: url('./assets/7.png');}
+td[data-number="8"]{ background-image: url('./assets/8.png');}
+td[data-number="9"]{ background-image: url('./assets/9.png');}
+td[data-number="10"]{ background-image: url('./assets/10.png');}
+td[data-number="11"]{ background-image: url('./assets/11.png');}
+td[data-number="12"]{ background-image: url('./assets/12.png');}
+td[data-number="13"]{ background-image: url('./assets/13.png');}
+td[data-number="14"]{ background-image: url('./assets/14.png');}
+td[data-number="15"]{ background-image: url('./assets/15.png');}
+td[data-number="16"]{ background-image: url('./assets/16.png');}
+td[data-number="-1"],
+td[data-number="-2"],
+td[data-number="-3"],
+td[data-number="-4"],
+td[data-number="-5"],
+td[data-number="-6"],
+td[data-number="-7"],
+td[data-number="-8"],
+td[data-number="-9"],
+td[data-number="-10"],
+td[data-number="-11"],
+td[data-number="-12"],
+td[data-number="-13"],
+td[data-number="-14"],
+td[data-number="-15"],
+td[data-number="-16"]{ background-image: url('./assets/exclamation.png');}
+
+td[data-piece="1"] { background-image: url('./assets/Pawn.png');}
+td[data-piece="2"] { background-image: url('./assets/Knight.png');}
+td[data-piece="3"] { background-image: url('./assets/Bishop.png');}
+td[data-piece="4"] { background-image: url('./assets/Rook.png');}
+td[data-piece="5"] { background-image: url('./assets/Queen.png');}
+td[data-piece="6"] { background-image: url('./assets/King.png');}
+
+img{
+    width: 10vmin;
+}
+
+@media (max-width: 600px) {
+    .board{
+        width: 100vmin;
+        height: 100vmin;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    td{
+        width: 12.5vmin;
+        height: 12.5vmin;
+    }
+    img{
+        width: 12.5vmin;
+    }
+}
+
+#flick{
+    position: absolute;
+    width: 10vmin;
+    height: 10vmin;
+    background-color: white;
+    border-radius: 2vmin;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Chess Sweeper Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-left">
+        <h1>Puzzles</h1>
+        <h3>level: <span style="color:#7AB994;" id="current_level">1</span></h3>
+    </div>
+
+    <div class="top-right">
+        <a href="">How to play</a>
+    </div>
+
+    <table class="board">
+        <tr>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+        </tr>
+        <tr>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+        </tr>
+        <tr>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+        </tr>
+        <tr>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+        </tr>
+        <tr>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+        </tr>
+        <tr>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+        </tr>
+        <tr>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+        </tr>
+        <tr>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+            <td class="square dark"></td>
+            <td class="square light"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>
+                <img src="./assets/Pawn.png">
+                <span id="pawn_count">0</span>
+            </th>
+            <th>
+                <img src="./assets/Knight.png">
+                <span id="knight_count">0</span>
+            </th>
+            <th>
+                <img src="./assets/Bishop.png">
+                <span id="bishop_count">0</span>
+            </th>
+            <th>
+                <img src="./assets/Rook.png">
+                <span id="rook_count">0</span>
+            </th>
+            <th>
+                <img src="./assets/Queen.png">
+                <span id="queen_count">0</span>
+            </th>
+            <th>
+                <img src="./assets/King.png">
+                <span id="king_count">0</span>
+            </th>
+            <th></th>
+        </tr>
+    </table>
+    <img  id="flick" hidden>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
