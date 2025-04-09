@@ -158,8 +158,8 @@ import levels from "./levels.js"
     function pointer_move(e)
     {
         if(!square) return
-        let x = e.x
-        let y = e.y
+        let x = e.x || e.touches[0].clientX
+        let y = e.y || e.touches[0].clientY
 
         if(y < rect.top)
         {
@@ -179,8 +179,8 @@ import levels from "./levels.js"
     function pointer_up(e)
     {
         if(!square) return
-        let x = e.x
-        let y = e.y
+        let x = e.x || e.touches[0].clientX
+        let y = e.y || e.touches[0].clientY
         if(y < rect.top)
             {
                 if(x < rect.left) square.dataset.piece = PIECE.BISHOP
