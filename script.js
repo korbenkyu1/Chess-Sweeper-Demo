@@ -139,72 +139,13 @@ import levels from "./levels.js"
         }
     }
     
-    let square = null
-    let rect
-    let x
-    let y
-    function poiner_down(e)
-    {
-        if (loading) return
-        if(!e.target.classList.contains('square')) return
-        if(parseInt(e.target.dataset.number) > 0) return
-
-        square = e.target
-        square.dataset.piece = PIECE.KING
-        rect = square.getBoundingClientRect()
-        flick.src = './assets/flick.png'
-        flick.style.top = `${rect.top + rect.top - rect.bottom}px`
-        flick.style.left = `${rect.left}px`
-        flick.hidden = false
-    }
-    function pointer_move(e)
-    {
-        if(!square) return
-        x = e.x || e.touches[0].clientX
-        y = e.y || e.touches[0].clientY
-
-        if(y < rect.top)
-        {
-            if(x < rect.left) flick.src = './assets/Bishop.png'
-            else if(x < rect.right) flick.src = './assets/Pawn.png'
-            else flick.src = './assets/Knight.png'
-        }
-        else if(y < rect.bottom)
-        {
-            if(x < rect.left) flick.src = './assets/Queen.png'
-            else if(x < rect.right)  flick.src = './assets/flick.png'
-            else flick.src = './assets/Rook.png'
-        }
-        else flick.src = './assets/Empty.png'
-    }
-    
-    function pointer_up(e)
-    {
-        if(!square) return
-        if(y < rect.top)
-            {
-                if(x < rect.left) square.dataset.piece = PIECE.BISHOP
-                else if(x < rect.right) square.dataset.piece = PIECE.PAWN
-                else square.dataset.piece = PIECE.KNIGHT
-            }
-            else if(y < rect.bottom)
-            {
-                if(x < rect.left) square.dataset.piece = PIECE.QUEEN
-                else if(x < rect.right) square.dataset.piece = PIECE.KING
-                else square.dataset.piece = PIECE.ROOK
-            }
-            else square.dataset.piece = PIECE.EMPTY
-        square = null
-        flick.hidden = true
-        scan()
-}
-
-    document.addEventListener('mousedown', poiner_down)
-    document.addEventListener('touchstart', poiner_down)
-    document.addEventListener('mousemove', pointer_move)
-    document.addEventListener('touchmove', pointer_move)
-    document.addEventListener('mouseup', pointer_up)
-    document.addEventListener('touchend', pointer_up)
-
+    squares.forEach((square, index) => {
+        square.addEventListener('click', () => {
+            if(loading) return
+            if(numbers[index]) return
+            square.dataset.piece = (parseInt(square.dataset.piece)+1) % 7
+            scan()
+        })
+    })
     load()
 })()
