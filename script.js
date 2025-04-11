@@ -150,12 +150,12 @@ import levels from "./levels.js"
     })
     prev.addEventListener('click', e => {
         e.preventDefault()
-        level--
+        level -= 1
         load()
     })
     next.addEventListener('click', e => {
         e.preventDefault()
-        level++
+        level += 1
         load()
     })
     load()
