@@ -17,6 +17,7 @@ import levels from "./levels.js"
     let loading = true
 
     function load() {
+        if (level < 0) return
         if (level >= levels.length) {
             alert("THANKS FOR PLAYING")
             return
@@ -146,6 +147,16 @@ import levels from "./levels.js"
             square.dataset.piece = (parseInt(square.dataset.piece)+1) % 7
             scan()
         })
+    })
+    prev.addEventListener('click', e => {
+        e.preventDefault()
+        level--
+        load()
+    })
+    next.addEventListener('click', e => {
+        e.preventDefault()
+        level++
+        load()
     })
     load()
 })()
