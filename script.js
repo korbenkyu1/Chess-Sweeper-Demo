@@ -151,11 +151,13 @@ import levels from "./levels.js"
     prev.addEventListener('click', e => {
         e.preventDefault()
         level -= 2
-        load()
+        loading = true
+        setTimeout(load, 250)
     })
     next.addEventListener('click', e => {
         e.preventDefault()
-        load()
+        loading = true
+        setTimeout(load, 250)
     })
     load()
 })()
