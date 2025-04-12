@@ -152,12 +152,14 @@ import levels from "./levels.js"
         e.preventDefault()
         level -= 2
         loading = true
-        setTimeout(load, 250)
+        load()
+        scan()
     })
     next.addEventListener('click', e => {
         e.preventDefault()
         loading = true
-        setTimeout(load, 250)
+        load()
+        scan()
     })
     load()
 })()
